@@ -38,6 +38,7 @@ const AuthProvider = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
 
             setUser(currentUser);
+            setLoading(false);
         })
 
         return () => {
@@ -58,11 +59,11 @@ const AuthProvider = ({children}) => {
 
     return (
         <div>
-            <AuthContext value={authInfo}>
+            <AuthContext.Provider value={authInfo}>
                 {children}
 
 
-            </AuthContext>
+            </AuthContext.Provider>
         </div>
     );
 };
