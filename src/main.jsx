@@ -49,15 +49,13 @@ const router = createBrowserRouter([
       
       {
         path: 'myProducts',
-        element: <PrivateRoute>
+        element: 
           <MyProducts></MyProducts>
-        </PrivateRoute>
+       
       },
       {
         path: 'myBids',
-        element: <PrivateRoute>
-          <MyBids></MyBids>
-        </PrivateRoute>
+        Component: MyBids
       },
       
     ]
