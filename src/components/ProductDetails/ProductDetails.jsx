@@ -20,6 +20,16 @@ const ProductDetails = () => {
                 console.log('bids for this product', data)
                 setBids(data);
             })
+        // fetch(`http://localhost:3000/products/bids/${productId}`, {
+        //     headers : {
+        //         authorization : `Bearer ${user.accessToken}`
+        //     }
+        // })
+        //     .then(res => res.json())
+        //     .then(data => {
+        //         console.log('bids for this product', data)
+        //         setBids(data);
+        //     })
     }, [productId, user])
 
     const handleBidModalOpen = () => {
